@@ -1,0 +1,115 @@
+.results {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+.results__item {
+  padding: 3px;
+  box-shadow: 0 0 5px 0px #cacaca;
+  text-align: left;
+  margin-bottom: 10px;
+  flex-basis: calc(50% - 5px);
+  list-style: none;
+  position: relative;
+}
+.results__item .favourite-button {
+  position: absolute;
+  z-index: 9999;
+  top: 5%;
+  right: 7%;
+  transform: translate(50%, -50%);
+}
+.results__item .favourite-button i {
+  background: #00b5ad;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+.results__item a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+.results__item .img {
+  flex: initial;
+  position: relative;
+}
+.results__item .img img {
+  width: 100%;
+  display: block;
+}
+.results__item__text {
+  flex: auto;
+  padding: 0 3px;
+}
+.results__item__text .title {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.results__item__text .source {
+  font-size: 12px;
+  color: gray;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.results__item__text .source strong {
+  font-weight: bold;
+}
+.results__item__scores {
+  display: flex;
+  flex: initial;
+  align-items: flex-end;
+  padding: 10px 3px;
+  border-top: 1px dotted gray;
+}
+.results__item__scores__score {
+  text-align: left;
+  flex: 33%;
+  display: flex;
+  align-items: center;
+}
+.results__item__scores__score span {
+  font-size: 12px;
+}
+.results__item__scores__score i {
+  margin-right: 5px;
+  font-size: 12px;
+  color: #00b5ad;
+}
+.results__item__scores__score .rating {
+  color: gold;
+}
+.results .load-more {
+  background: #fcf4ec;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 40px;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .results__item {
+    flex-basis: calc(33% - 5px);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .results__item {
+    flex-basis: calc(25% - 10px);
+  }
+  .results__item__text .title {
+    font-size: 16px;
+  }
+  .results__item__scores i,
+  .results__item__scores span {
+    font-size: 14px;
+  }
+}
