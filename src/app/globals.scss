@@ -1,0 +1,108 @@
+@import "./components/Header/Header.scss";
+@import "./components/RecipieCard/RecipieCard.scss";
+@import "./components/autoComplete/autoComplete.scss";
+@import "./components/RecipeCardDetails/RecipeCardDetails.scss";
+@import "./components/Account/Account.scss";
+@import "./components//HomePage/HomePage.scss";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.content {
+  position: relative;
+}
+main {
+  text-align: center;
+  background: rgb(255, 255, 255);
+  min-height: 100vh;
+
+  .favourites {
+    padding-top: 10px;
+  }
+}
+
+.stats {
+  display: flex;
+  background: #00b5ad;
+  padding: 10px 5px;
+  &__item {
+    flex-basis: auto;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #00b5ad;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    gap: 2px;
+
+    &:nth-child(2) {
+      svg {
+        color: gold;
+      }
+    }
+    &:nth-child(4) {
+      svg {
+        color: gold;
+      }
+    }
+
+    svg {
+      height: 12px;
+      color: white;
+    }
+    .rating {
+      color: gold;
+    }
+  }
+}
+
+.search {
+  padding-top: 10px;
+  .wrapper {
+    .cuisines {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 95%;
+      display: flex;
+      overflow: scroll;
+      align-items: center;
+      &__item {
+        padding: 15px;
+        list-style: none;
+        border-radius: 10px;
+        background: #e6e6e6;
+        margin-right: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .autocomplete {
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: darken(white, 10%);
+      border-radius: 10px;
+    }
+  }
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}

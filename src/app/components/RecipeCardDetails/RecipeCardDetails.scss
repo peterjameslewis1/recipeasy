@@ -1,9 +1,10 @@
 .single-recipe {
   text-align: left;
   .img {
+    height: 300px;
+    position: relative;
     img {
-      width: 100%;
-      display: block;
+      object-fit: cover;
     }
   }
   &__cuisines {
